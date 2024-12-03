@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de MongoDB</title>
+    <style>
+        table {
+            width: 50%;
+            margin: 50px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Datos de la Colección 'Personas'</h1>
+    
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+        </tr>
+        {% for persona in personas %}
+        <tr>
+            <td>{{ persona['nombre'] }}</td>
+            <td>{{ persona['edad'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
